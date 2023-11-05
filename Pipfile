@@ -10,11 +10,13 @@ gunicorn = "*"
 [dev-packages]
 pytest = "*"
 coverage = "*"
+mypy = "*"
 
 [scripts]
 dev = "flask --app flaskr --debug run"
 test = "coverage run -m pytest"
 test-report = "coverage report -m"
+type-check = "mypy ./flaskr"
 
 [requires]
 python_version = "3.11"
